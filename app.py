@@ -40,7 +40,7 @@ def submit_booking():
         writer = csv.writer(file)
         writer.writerow([name, email, phone, ride, date, timestamp])
 
-    # Redirect to the confirmation page after successful booking
+    # Redirects to the confirmation page after successful booking
     return redirect('/confirmation')
 
 @app.route('/confirmation')
