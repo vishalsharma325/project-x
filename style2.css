@@ -8,7 +8,7 @@ body {
 
 .container {
     background: rgba(70, 151, 243, 0.473); 
-    /* Optional: adds transparency for readability */
+   
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
