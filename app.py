@@ -16,6 +16,42 @@ def initialize_file():
     except FileExistsError:
         pass
 
+# Route for the homepage
+@app.route('/')
+def home():
+    return render_template('main.html')
+
+@app.route('/rides')
+def rides():
+    return render_template('rides.html')
+
+@app.route('/events')
+def events():
+    return render_template('events.html')
+
+@app.route('/tickets')
+def tickets():
+    return render_template('index.html')
+@app.route('/index1.html')
+def index1():
+    return render_template('index1.html')
+
+@app.route('/index2.html')
+def index2():
+    return render_template('index2.html')
+
+@app.route('/index3.html')
+def index3():
+    return render_template('index3.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/confirmation')
+def confirmation():
+    return render_template('confirmation.html')
+
 @app.route('/submit', methods=['POST'])
 def submit_booking():
     # Validate and get data from the form
@@ -40,13 +76,8 @@ def submit_booking():
         writer = csv.writer(file)
         writer.writerow([name, email, phone, ride, date, timestamp])
 
-    # Redirects to the confirmation page after successfull booking
+    # Redirect to the confirmation page after successful booking
     return redirect('/confirmation')
-
-@app.route('/confirmation')
-def confirmation():
-    # Render the confirmation page
-    return render_template('confirmation.html')
 
 if __name__ == '__main__':
     initialize_file()
