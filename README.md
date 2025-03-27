@@ -4,3 +4,4 @@ In this platform a user can book his favourite ride.
 User has a also option available to book his ride according to time slot he wants.
 .
 .
+.
